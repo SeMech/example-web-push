@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web-push notification</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/article.css" />
+  <script src="assets/js/index.js"></script>
+</head>
+<body>
+  <section id="main" class="container">
+    <button id="button-show_create_article" class="common-button">Создать статью</button>
+    <div class="articles_wrapper" id="articles-wrapper">
+
+    </div>
+  </section>
+
+  <div id="popup-article" class="popup popup_article">
+    <div class="popup-content">
+      <div class="popup_article-body"></div>
+      <button class="common-button button-close_popup" data-popup="popup-article">Закрыть</button>
+    </div>
+  </div>
+
+  <div id="popup-create" class="popup popup_create_view">
+    <div class="popup-content">
+      <div class="popup_create_view-title">Создание статьи</div>
+      <label class="input_group">
+        <span>Заголовок</span>
+        <input type="text" class="popup_create_view-input_title" id="input-title-popup" />
+      </label>
+      <label class="input_group">
+        <span>Контен</span>
+        <textarea class="popup_create_view-input_content" id="input-content-popup"></textarea>
+      </label>
+      <div class="buttons_wrapper">
+        <button class="common-button button-close_popup" data-popup="popup-create">Закрыть</button>
+        <button class="common-button button-save_article" id="button-save-article">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

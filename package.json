@@ -1,0 +1,28 @@
+{
+  "name": "example-web-push",
+  "version": "1.0.0",
+  "description": "Example usage Web push notification",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeMech/example-web-push.git"
+  },
+  "author": "https://github.com/SeMech",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeMech/example-web-push/issues"
+  },
+  "homepage": "https://github.com/SeMech/example-web-push#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@fastify/static": "^6.6.0",
+    "fastify": "^4.10.2",
+    "fastify-sqlite": "^1.1.0"
+  }
+}
