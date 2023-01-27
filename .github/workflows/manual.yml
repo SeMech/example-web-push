@@ -13,10 +13,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  # Setting an environment variable with the value of a configuration variable
-  env_var: ${{ vars.ENV_CONTEXT_VAR }}
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -29,20 +25,17 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       
-      - name: Use variables
-        run: |
-          echo "repository variable : ${{ vars.REPOSITORY_VAR }}"
-          echo "organization variable : ${{ vars.ORGANIZATION_VAR }}"
-          echo "overridden variable : ${{ vars.OVERRIDE_VAR }}"
-          echo "variable from shell environment : $env_var"
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '12.x'
 
       - uses: iamsauravsharma/create-dotenv@v1.2.2
         env: # env available for only this steps
-          VAPID_PRIVE_KEY: ${{ vars.VAPID_PRIVE_KEY }}
-          VAPID_PUBLIC_KEY: ${{ vars.VAPID_PUBLIC_KEY }}
+          VAPID_PRIVE_KEY: ${{ secrets.VAPID_PRIVE_KEY }}
+          VAPID_PUBLIC_KEY: ${{ secrets.VAPID_PUBLIC_KEY }}
 
       - name: Show envs
-        run: echo ${{ vars }}
+        run: echo .env
 #       - name: Setup Node.js environment
 #         uses: actions/setup-node@v3.6.0
 #         with:
