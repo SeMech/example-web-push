@@ -30,6 +30,8 @@ jobs:
           VAPID_PRIVE_KEY: ${{ vars.VAPID_PRIVE_KEY }}
           VAPID_PUBLIC_KEY: ${{ vars.VAPID_PUBLIC_KEY }}
 
+      - name: Show envs
+        run: cat .env
 #       - name: Setup Node.js environment
 #         uses: actions/setup-node@v3.6.0
 #         with:
