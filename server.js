@@ -11,6 +11,8 @@ const {notification} = require('./utils/notification')
 
 require('dotenv').config()
 
+console.log(process.env)
+
 webPush.setVapidDetails(
   'mailto:$email$', // subject
   process.env.VAPID_PUBLIC_KEY, // public key
