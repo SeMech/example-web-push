@@ -112,22 +112,12 @@ function main() {
     })
   })
 
+  // регистрируем уведомления
+  registerNotification()
 
   updateArticleCardContent()
 }
 
-async function updateArticles() {
-  return await fetch('/api/articles', {method: 'GET'}).then(res => res.json())
-}
 
-async function createArticle(payload) {
-  return await fetch('/api/articles', {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json'
-    },
-    body: JSON.stringify(payload)
-  })
-}
 
 window.addEventListener('DOMContentLoaded', main)

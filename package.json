@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/SeMech/example-web-push#readme",
   "devDependencies": {
+    "fastify-plugin": "^4.4.0",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
     "@fastify/static": "^6.6.0",
+    "dotenv": "^16.0.3",
     "fastify": "^4.10.2",
-    "fastify-sqlite": "^1.1.0"
+    "fastify-sqlite": "^1.1.0",
+    "web-push": "^3.5.0"
   }
 }
