@@ -27,7 +27,7 @@ jobs:
       
       - uses: actions/setup-node@v3
         with:
-          node-version: '12.x'
+          node-version: '16.15.0'
 
       - uses: iamsauravsharma/create-dotenv@v1.2.2
         env: # env available for only this steps
